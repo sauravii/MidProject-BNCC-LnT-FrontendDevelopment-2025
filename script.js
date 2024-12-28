@@ -49,7 +49,32 @@ const courses = [
   },
 ];
 
-const container = document.querySelector(".card-course-container");
+const testimoni = [
+  {
+    icon: "assets/icons/ic-petik.svg",
+    comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea",
+    profile: "assets/images/img-mask-profile.png",
+    name: "Leah Curnig",
+    position: "CEO Tambang Mas",
+  },
+  {
+    icon: "assets/icons/ic-petik.svg",
+    comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea",
+    profile: "assets/images/img-mask-profile.png",
+    name: "John Smith",
+    position: "CEO Suka Mas",
+  },
+  {
+    icon: "assets/icons/ic-petik.svg",
+    comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea",
+    profile: "assets/images/img-mask-profile.png",
+    name: "Alexandra Christy",
+    position: "CEO Bisa Mas",
+  },
+];
+
+const classContainer = document.querySelector(".card-course-container");
+const testiContainer = document.querySelector(".testimoni-container");
 
 courses.forEach((course) => {
   const courseCard = document.createElement("div");
@@ -127,5 +152,49 @@ courses.forEach((course) => {
   courseCard.appendChild(courseName);
   courseCard.appendChild(enrollButton);
 
-  container.appendChild(courseCard);
+  classContainer.appendChild(courseCard);
+});
+
+testimoni.forEach((testi) => {
+  const testimoniCard = document.createElement("div");
+  testimoniCard.classList.add("card-testimoni");
+
+  const imgPetik = document.createElement("img");
+  imgPetik.src = testi.icon;
+  imgPetik.alt = "Petik Icon";
+
+  const comment = document.createElement("p");
+  comment.classList.add("comment");
+  comment.textContent = testi.comment;
+
+  const divPerson = document.createElement("div");
+  divPerson.classList.add("person");
+
+  const imgprofile = document.createElement("img");
+  imgprofile.src = testi.profile;
+  imgprofile.alt = "Profile Icon";
+  divPerson.appendChild(imgprofile);
+
+  const divPersonDesc = document.createElement("div");
+  divPersonDesc.classList.add("person-desc");
+
+  const personName = document.createElement("h3");
+  personName.classList.add("person-name");
+  personName.textContent = testi.name;
+
+  const personPosition = document.createElement("p");
+  personPosition.classList.add("person-position");
+  personPosition.textContent = testi.position;
+
+  divPersonDesc.appendChild(personName);
+  divPersonDesc.appendChild(personPosition);
+
+  divPerson.appendChild(imgprofile);
+  divPerson.appendChild(divPersonDesc);
+
+  testimoniCard.appendChild(imgPetik);
+  testimoniCard.appendChild(comment);
+  testimoniCard.appendChild(divPerson);
+
+  testiContainer.appendChild(testimoniCard);
 });

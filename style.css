@@ -313,4 +313,50 @@ nav {
   color: var(--text-secondary);
 }
 
+.testimoni-container {
+  margin-top: 55px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px;
+}
+
+.card-testimoni {
+  background-color: var(--color-white);
+  padding: 25px 33px;
+  width: 469px;
+}
+
+.comment {
+  font-family: var(--font-family);
+  font-size: var(--desc-medium);
+  font-weight: var(--weight-medium);
+  color: rgba(0, 0, 0, 0.8);
+  margin: 20px 0px 45px 0px;
+}
+
+.person {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.person-desc {
+  display: flex;
+  flex-direction: column;
+}
+
+.person-name {
+  font-family: var(--font-family);
+  font-size: var(--desc-big);
+  font-weight: var(--weight-semibold);
+  color: var(--color-primary);
+  margin-bottom: -2px;
+}
+
+.person-position {
+  font-family: var(--font-family);
+  font-size: var(--desc-small);
+  font-weight: var(--weight-regular);
+  color: var(--text-ternary);
+}
 /* END TESTIMONI */

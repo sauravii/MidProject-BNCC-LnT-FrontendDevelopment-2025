@@ -387,6 +387,7 @@ nav {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: space-between;
+  margin-bottom: 150px;
 }
 
 .maps-container {
@@ -456,3 +457,51 @@ nav {
   }
 }
 /* END CONTACT US */
+
+/* FOOTER */
+.footer {
+  background-color: var(--color-primary);
+  padding: 70px;
+}
+
+.logo-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 120px;
+}
+
+.body-footer {
+  margin-bottom: 50px;
+}
+
+.left-content {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.details-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.ic-footer {
+  width: 52px;
+  height: 41px;
+}
+
+.desc-one {
+  font-family: var(--font-family);
+  font-size: var(--desc-very-big);
+  font-weight: var(--weight-medium);
+  color: var(--color-white);
+}
+
+.desc-two {
+  font-family: var(--font-family);
+  font-size: var(--desc-medium);
+  font-weight: var(--weight-regular);
+  color: rgba(255, 255, 255, 0.75);
+}
+/* END FOOTER */

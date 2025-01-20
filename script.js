@@ -8,7 +8,7 @@ const courses = [
     meetings: "12 Meetings",
   },
   {
-    title: "Mastering Backend Web Development: A Comprehensive Guide to Building Scalable Web Applications",
+    title: "Mastering Backend Web Development: A Guide to Building Scalable Web Applications",
     divisi: "Backend Development",
     image: "assets/images/img-backend.jpg",
     icon: "assets/icons/ic-backend.svg",
@@ -32,7 +32,7 @@ const courses = [
     meetings: "12 Meetings",
   },
   {
-    title: "Unlocking the Power of Java: A Beginner's Guide to Mastering Programming Concepts from Basics to Advanced Applications",
+    title: "Unlocking the Power of Java: A Beginner's Guide to Mastering Programming Concepts from Basics",
     divisi: "Java Programming",
     image: "assets/images/img-java.jpg",
     icon: "assets/icons/ic-java.svg",
@@ -40,7 +40,7 @@ const courses = [
     meetings: "12 Meetings",
   },
   {
-    title: "Building User-Centered Designs: A Comprehensive Course on UI/UX Principles for Creating Intuitive Digital Experiences",
+    title: "Building User-Centered Designs: A Course on UI/UX Principles for Creating Intuitive Digital Experiences",
     divisi: "UI/UX Design",
     image: "assets/images/img-uiux.jpg",
     icon: "assets/icons/ic-uiux.svg",
@@ -197,4 +197,9 @@ testimoni.forEach((testi) => {
   testimoniCard.appendChild(divPerson);
 
   testiContainer.appendChild(testimoniCard);
+});
+
+// login
+document.querySelector(".btn-login").addEventListener("click", function () {
+  window.location.href = "./pages/login/index.html";
 });

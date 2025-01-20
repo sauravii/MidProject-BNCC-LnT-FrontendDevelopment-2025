@@ -188,7 +188,7 @@ nav {
 .card-course-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
 }
 
 .card-course {
@@ -467,7 +467,7 @@ nav {
 .logo-footer {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 120px;
+  margin-bottom: 100px;
 }
 
 .body-footer {

@@ -32,7 +32,7 @@ const courses = [
     meetings: "12 Meetings",
   },
   {
-    title: "Unlocking the Power of Java: A Beginner's Guide to Advanced Programming Concepts",
+    title: "Unlocking the Power of Java: A Beginner's Guide to Mastering Programming Concepts from Basics to Advanced Applications",
     divisi: "Java Programming",
     image: "assets/images/img-java.jpg",
     icon: "assets/icons/ic-java.svg",
@@ -40,7 +40,7 @@ const courses = [
     meetings: "12 Meetings",
   },
   {
-    title: "Building User-Centered Designs: A Comprehensive Course on UI/UX Principles",
+    title: "Building User-Centered Designs: A Comprehensive Course on UI/UX Principles for Creating Intuitive Digital Experiences",
     divisi: "UI/UX Design",
     image: "assets/images/img-uiux.jpg",
     icon: "assets/icons/ic-uiux.svg",

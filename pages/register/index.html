@@ -10,8 +10,81 @@
 
     <!-- JS -->
     <script src="script.js" defer></script>
+
+    <!-- FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1>Register Page</h1>
+    <div class="container">
+      <div class="top-content">
+        <img src="../../assets/images/img-logo-bncc-blue.png" alt="Logo BNCC" class="img-logo-bncc" />
+        <h2 class="text-greet">BNCC Registration</h2>
+      </div>
+
+      <div class="mid-content">
+        <!-- nama lengkap -->
+        <div class="input-wrapper">
+          <p class="input-name">Nama Lengkap</p>
+          <input type="text" placeholder="Masukkan nama lengkap" class="form-input" id="input-name" />
+          <p class="error-message" id="name-error"></p>
+        </div>
+        <!-- gender -->
+        <div class="input-wrapper">
+          <p class="input-name">Jenis Kelamin</p>
+          <form class="radio-gender">
+            <div class="box-radio">
+              <input type="radio" id="male" name="gender" value="male" />
+              <label for="male" class="label-gender">Laki-laki</label>
+            </div>
+
+            <div class="box-radio">
+              <input type="radio" id="female" name="gender" value="female" />
+              <label for="female" class="label-gender">Perempuan</label>
+            </div>
+          </form>
+        </div>
+        <!-- tgl lahir -->
+        <div class="input-wrapper">
+          <p class="input-name">Tanggal Lahir</p>
+          <input type="date" placeholder="dd/mm/yyyy" class="form-input" id="input-birthdate" />
+          <p class="error-message" id="birthdate-error"></p>
+        </div>
+        <!-- tempat lahir -->
+        <div class="input-wrapper">
+          <p class="input-name">Tempat Lahir</p>
+          <input type="text" placeholder="Masukkan tempat lahir" class="form-input" id="input-birthplace" />
+          <p class="error-message" id="birthplace-error"></p>
+        </div>
+        <!-- domisili -->
+        <div class="input-wrapper">
+          <p class="input-name">Kota Dimisili</p>
+          <input type="text" placeholder="Masukkan kota dimisili" class="form-input" id="input-dimisili" />
+          <p class="error-message" id="dimisili-error"></p>
+        </div>
+        <!-- alamat -->
+        <div class="input-wrapper">
+          <p class="input-name">Alamat Lengkap</p>
+          <input type="text" placeholder="Masukkan alamat lengkap" class="form-input" id="input-address" />
+          <p class="error-message" id="address-error"></p>
+        </div>
+        <!-- whatsapp -->
+        <div class="input-wrapper">
+          <p class="input-name">Nomor WhatsApp</p>
+          <input type="text" placeholder="Masukkan nomor WhatsApp" class="form-input" id="input-whatsapp" />
+          <p class="error-message" id="whatsapp-error"></p>
+        </div>
+      </div>
+
+      <div class="bottom-content">
+        <button class="btn-login" id="btn-login">Register</button>
+        <p class="text-confirm">
+          Sudah punya akun?
+          <a href="../login/index.html">Login</a>
+        </p>
+      </div>
+    </div>
   </body>
 </html>

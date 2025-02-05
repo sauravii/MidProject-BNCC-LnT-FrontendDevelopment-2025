@@ -4,48 +4,48 @@ const courses = [
     divisi: "Frontend Development",
     image: "assets/images/img-frontend.jpg",
     icon: "assets/icons/ic-frontend.svg",
-    lessons: "25 Lessons",
-    meetings: "12 Meetings",
+    lessons: "25 Materi",
+    meetings: "12 Pertemuan",
   },
   {
     title: "Mastering Backend Web Development: A Guide to Building Scalable Web Applications",
     divisi: "Backend Development",
     image: "assets/images/img-backend.jpg",
     icon: "assets/icons/ic-backend.svg",
-    lessons: "25 Lessons",
-    meetings: "12 Meetings",
+    lessons: "25 Materi",
+    meetings: "12 Pertemuan",
   },
   {
     title: "Kotlin for Android Development: From Fundamentals to Advanced Techniques for Scalable and Efficient Apps",
     divisi: "Mobile App Development",
     image: "assets/images/img-mobdev.jpg",
     icon: "assets/icons/ic-mobile.svg",
-    lessons: "25 Lessons",
-    meetings: "12 Meetings",
+    lessons: "25 Materi",
+    meetings: "12 Pertemuan",
   },
   {
     title: "Complete C Programming Course: Learn Fundamentals, Algorithms, and Data Structures",
     divisi: "C Programming",
     image: "assets/images/img-cprog.jpg",
     icon: "assets/icons/ic-cprog.svg",
-    lessons: "25 Lessons",
-    meetings: "12 Meetings",
+    lessons: "25 Materi",
+    meetings: "12 Pertemuan",
   },
   {
     title: "Unlocking the Power of Java: A Beginner's Guide to Mastering Programming Concepts from Basics",
     divisi: "Java Programming",
     image: "assets/images/img-java.jpg",
     icon: "assets/icons/ic-java.svg",
-    lessons: "25 Lessons",
-    meetings: "12 Meetings",
+    lessons: "25 Materi",
+    meetings: "12 Pertemuan",
   },
   {
     title: "Building User-Centered Designs: A Course on UI/UX Principles for Creating Intuitive Digital Experiences",
     divisi: "UI/UX Design",
     image: "assets/images/img-uiux.jpg",
     icon: "assets/icons/ic-uiux.svg",
-    lessons: "15 Lessons",
-    meetings: "8 Meetings",
+    lessons: "15 Materi",
+    meetings: "8 Pertemuan",
   },
 ];
 
@@ -70,6 +70,27 @@ const testimoni = [
     profile: "assets/images/img-mask-profile.png",
     name: "Alexandra Christy",
     position: "CEO Bisa Mas",
+  },
+  {
+    icon: "assets/icons/ic-petik.svg",
+    comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea",
+    profile: "assets/images/img-mask-profile.png",
+    name: "Alexandra Christy",
+    position: "CEO Oke Mas",
+  },
+  {
+    icon: "assets/icons/ic-petik.svg",
+    comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea",
+    profile: "assets/images/img-mask-profile.png",
+    name: "Ludwig John",
+    position: "CEO Asoy Mas",
+  },
+  {
+    icon: "assets/icons/ic-petik.svg",
+    comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea",
+    profile: "assets/images/img-mask-profile.png",
+    name: "Leony Marcha",
+    position: "CEO Siap Mas",
   },
 ];
 
@@ -145,7 +166,11 @@ courses.forEach((course) => {
 
   const enrollButton = document.createElement("button");
   enrollButton.classList.add("btn-enroll");
-  enrollButton.textContent = "Enroll This Course";
+  enrollButton.textContent = "Gabung Kelas Ini";
+
+  enrollButton.addEventListener("click", () => {
+    alert(`Kamu mendaftar di kelas ${course.title}`);
+  });
 
   courseCard.appendChild(imgCourse);
   courseCard.appendChild(courseDetail);
@@ -199,7 +224,91 @@ testimoni.forEach((testi) => {
   testiContainer.appendChild(testimoniCard);
 });
 
+const testiPerPage = 3;
+let currentPage = 1;
+
+function displayTestimonials() {
+  testiContainer.innerHTML = "";
+
+  const startIndex = (currentPage - 1) * testiPerPage;
+  const endIndex = startIndex + testiPerPage;
+  const currentTesti = testimoni.slice(startIndex, endIndex);
+
+  currentTesti.forEach((testi) => {
+    const testimoniCard = document.createElement("div");
+    testimoniCard.classList.add("card-testimoni");
+
+    const imgPetik = document.createElement("img");
+    imgPetik.src = testi.icon;
+    imgPetik.alt = "Petik Icon";
+
+    const comment = document.createElement("p");
+    comment.classList.add("comment");
+    comment.textContent = testi.comment;
+
+    const divPerson = document.createElement("div");
+    divPerson.classList.add("person");
+
+    const imgprofile = document.createElement("img");
+    imgprofile.src = testi.profile;
+    imgprofile.alt = "Profile Icon";
+
+    const divPersonDesc = document.createElement("div");
+    divPersonDesc.classList.add("person-desc");
+
+    const personName = document.createElement("h3");
+    personName.classList.add("person-name");
+    personName.textContent = testi.name;
+
+    const personPosition = document.createElement("p");
+    personPosition.classList.add("person-position");
+    personPosition.textContent = testi.position;
+
+    divPersonDesc.appendChild(personName);
+    divPersonDesc.appendChild(personPosition);
+    divPerson.appendChild(imgprofile);
+    divPerson.appendChild(divPersonDesc);
+
+    testimoniCard.appendChild(imgPetik);
+    testimoniCard.appendChild(comment);
+    testimoniCard.appendChild(divPerson);
+
+    testiContainer.appendChild(testimoniCard);
+  });
+}
+
+function setupPagination() {
+  const paginationContainer = document.querySelector(".pagination");
+  paginationContainer.innerHTML = "";
+
+  const totalPages = Math.ceil(testimoni.length / testiPerPage);
+
+  for (let i = 1; i <= totalPages; i++) {
+    const dot = document.createElement("span");
+    dot.classList.add("dot");
+    if (i === currentPage) dot.classList.add("active");
+    dot.addEventListener("click", () => {
+      currentPage = i;
+      updatePagination();
+    });
+    paginationContainer.appendChild(dot);
+  }
+}
+
+function updatePagination() {
+  displayTestimonials();
+  setupPagination();
+}
+
+updatePagination();
+
 // login
-document.querySelector(".btn-login").addEventListener("click", function () {
+const btnLogin = document.querySelector(".btn-login");
+btnLogin.addEventListener("click", function () {
   window.location.href = "./pages/login/index.html";
+});
+// register
+const btnRegister = document.querySelector(".btn-register");
+btnRegister.addEventListener("click", function () {
+  window.location.href = "./pages/register/index.html";
 });

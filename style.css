@@ -44,22 +44,20 @@ html {
 .header {
   min-height: 100vh;
   width: 100%;
-  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url("assets/images/img-background.jpg");
-  background-position: center;
-  background-size: cover;
-  position: relative;
+  padding: 30px 65px;
 }
 
 nav {
   display: flex;
   flex-direction: row;
-  padding: 30px 65px;
   justify-content: space-between;
+  margin-bottom: 80px;
+  /* background-color: green; */
 }
 
 .logo-bncc {
   width: 150px;
-  height: 50px;
+  height: 60px;
 }
 
 .nav-links {
@@ -85,7 +83,7 @@ nav {
 
 .nav-links ul li a {
   text-decoration: none;
-  color: var(--color-white);
+  color: var(--color-primary);
   font-family: var(--font-family);
   font-size: var(--desc-very-big);
   position: relative;
@@ -99,7 +97,7 @@ nav {
   width: 0;
   height: 3px;
   border-radius: 5px;
-  background-color: var(--color-white);
+  background-color: var(--color-primary);
   transform: translateX(-50%);
   transition: width 0.3s ease;
 }
@@ -108,55 +106,90 @@ nav {
   width: 90%;
 }
 
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
 .btn-login {
   height: 50px;
   width: 134px;
-  background-color: transparent;
-  border: 2px solid var(--color-white);
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-primary);
   border-radius: 4px;
   color: var(--color-white);
   font-family: var(--font-family);
   cursor: pointer;
   font-weight: var(--weight-medium);
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-register {
+  height: 50px;
+  width: 134px;
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+  border-radius: 4px;
+  color: var(--color-primary);
+  font-family: var(--font-family);
+  cursor: pointer;
+  font-weight: var(--weight-medium);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-learn-more:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary);
 }
 
 .btn-login:hover {
   background-color: var(--color-white);
-  color: var(--text-primary);
+  color: var(--color-primary);
 }
 
-.text-box {
-  text-align: center;
-  margin-top: 80px;
+.btn-register:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.head-content {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 }
 
-.header-text {
+.left-content {
+}
+
+.title-head {
   font-family: var(--font-family);
+  font-size: 80px;
   font-weight: var(--weight-semibold);
-  font-size: var(--heading-font-size);
-  color: var(--color-white);
-  letter-spacing: 4px;
 }
 
-.header-desc {
-  width: 940px;
-  margin-top: 55px;
+.desc-head {
   font-family: var(--font-family);
-  font-weight: var(--desc-medium);
-  font-size: var(--desc-big);
-  color: var(--color-white);
+  font-size: var(--desc-very-big);
+  font-weight: var(--weight-medium);
+  color: var(--text-secondary);
+  line-height: 2;
+  margin-bottom: 45px;
 }
 
-.btn-know-more {
+.right-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 13px;
+}
+
+.btn-learn-more {
   height: 50px;
-  padding: 0px 40px;
-  margin-top: 50px;
-  background-color: transparent;
-  border: 2px solid var(--color-white);
+  width: 264px;
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-primary);
   border-radius: 4px;
   color: var(--color-white);
   font-family: var(--font-family);
@@ -165,10 +198,27 @@ nav {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.btn-know-more:hover {
-  background-color: var(--color-white);
-  color: var(--text-primary);
+.banner-section {
+  margin-top: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 80px;
 }
+
+.banner {
+  border: solid 2px var(--color-primary);
+  padding: 12px 40px;
+  border-radius: 25px;
+}
+
+.banner-text {
+  font-family: var(--font-family);
+  font-size: var(--desc-big);
+  font-weight: var(--desc-medium);
+  color: var(--color-primary);
+}
+
 /* END HEADER */
 
 /* LIST COURSE */
@@ -200,7 +250,7 @@ nav {
 }
 
 .img-course {
-  width: 365px;
+  width: 478px;
   height: 209px;
   border-radius: 12px;
 }
@@ -361,6 +411,29 @@ nav {
   font-size: var(--desc-small);
   font-weight: var(--weight-regular);
   color: var(--text-ternary);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.pagination .dot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-primary);
+  opacity: 0.2;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.pagination .dot.active {
+  background-color: var(--color-primary);
+  opacity: 1;
+  transform: scale(1.2);
 }
 /* END TESTIMONI */
 

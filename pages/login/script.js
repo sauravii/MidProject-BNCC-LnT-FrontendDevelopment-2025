@@ -13,31 +13,31 @@ iconEyes.addEventListener("click", () => {
 btnLogin.addEventListener("click", function (event) {
   event.preventDefault();
 
-  const teamName = document.getElementById("input-team").value;
+  const email = document.getElementById("input-email").value;
   const password = document.getElementById("input-pass").value;
 
   let isValid = true;
 
-  document.getElementById("team-error").style.display = "none";
+  document.getElementById("email-error").style.display = "none";
   document.getElementById("pass-error").style.display = "none";
-  document.getElementById("input-team").classList.remove("error");
+  document.getElementById("input-email").classList.remove("error");
   document.getElementById("input-pass").classList.remove("error");
 
-  if (!teamName) {
-    document.getElementById("team-error").textContent = "Team name is required";
-    document.getElementById("team-error").style.display = "block";
-    document.getElementById("input-team").classList.add("error");
+  if (!email) {
+    document.getElementById("email-error").textContent = "Email tidak boleh kosong";
+    document.getElementById("email-error").style.display = "block";
+    document.getElementById("input-email").classList.add("error");
     isValid = false;
   }
 
   if (!password) {
-    document.getElementById("pass-error").textContent = "Password is required";
+    document.getElementById("pass-error").textContent = "Password tidak boleh kosong";
     document.getElementById("pass-error").style.display = "block";
     document.getElementById("input-pass").classList.add("error");
     document.getElementById("input-pass").parentElement.classList.add("error");
     isValid = false;
   } else if (password.length < 8) {
-    document.getElementById("pass-error").textContent = "Password must be at least 8 characters";
+    document.getElementById("pass-error").textContent = "Password harus mengandung 8 karakter";
     document.getElementById("pass-error").style.display = "block";
     document.getElementById("input-pass").classList.add("error");
     document.getElementById("input-pass").parentElement.classList.add("error");

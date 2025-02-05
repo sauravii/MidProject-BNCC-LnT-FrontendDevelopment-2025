@@ -312,3 +312,69 @@ const btnRegister = document.querySelector(".btn-register");
 btnRegister.addEventListener("click", function () {
   window.location.href = "./pages/register/index.html";
 });
+
+// contact us
+const inputName = document.getElementById("input-name").value.trim();
+const inputInsta = document.getElementById("input-insta").value.trim();
+const inputTelp = document.getElementById("input-telp").value.trim();
+const inputAddress = document.getElementById("input-address").value.trim();
+const inputMessage = document.getElementById("input-message").value.trim();
+
+const btnSubmit = document.getElementById("btn-submit");
+btnSubmit.addEventListener("click", function (event) {
+  event.preventDefault();
+
+  let isValid = true;
+
+  document.getElementById("name-error").style.display = "none";
+  document.getElementById("insta-error").style.display = "none";
+  document.getElementById("telp-error").style.display = "none";
+  document.getElementById("message-error").style.display = "none";
+
+  document.getElementById("input-name").classList.remove("error");
+  document.getElementById("input-insta").classList.remove("error");
+  document.getElementById("input-telp").classList.remove("error");
+  document.getElementById("input-message").classList.remove("error");
+
+  document.querySelectorAll(".error-message").forEach((el) => (el.style.display = "none"));
+  document.querySelectorAll(".form-input").forEach((el) => el.classList.remove("error"));
+
+  if (!inputName) {
+    document.getElementById("name-error").textContent = "Nama tidak boleh kosong";
+    document.getElementById("name-error").style.display = "block";
+    document.getElementById("input-name").classList.add("error");
+    isValid = false;
+  }
+
+  if (!inputInsta) {
+    document.getElementById("insta-error").textContent = "Instagram tidak boleh kosong";
+    document.getElementById("insta-error").style.display = "block";
+    document.getElementById("input-insta").classList.add("error");
+    isValid = false;
+  }
+
+  if (!inputTelp) {
+    document.getElementById("telp-error").textContent = "Nomor telepon tidak boleh kosong";
+    document.getElementById("telp-error").style.display = "block";
+    document.getElementById("input-telp").classList.add("error");
+    isValid = false;
+  }
+
+  if (!inputAddress) {
+    document.getElementById("address-error").textContent = "Alamat tidak boleh kosong";
+    document.getElementById("address-error").style.display = "block";
+    document.getElementById("input-address").classList.add("error");
+    isValid = false;
+  }
+
+  if (!inputMessage) {
+    document.getElementById("message-error").textContent = "Pesan tidak boleh kosong";
+    document.getElementById("message-error").style.display = "block";
+    document.getElementById("input-message").classList.add("error");
+    isValid = false;
+  }
+
+  if (isValid) {
+    alert("Form berhasil dikirim!");
+  }
+});

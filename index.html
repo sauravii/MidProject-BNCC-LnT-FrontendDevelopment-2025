@@ -110,12 +110,32 @@
 
         <div class="form-container">
           <form class="contact-form">
-            <input type="text" placeholder="Masukkan nama" required />
-            <input type="text" placeholder="Masukkan username instagram" required />
-            <input type="tel" placeholder="Masukkan nomor telepon" required />
-            <input type="text" placeholder="Masukkan alamat" required />
-            <textarea placeholder="Masukkan pesan" rows="4" required></textarea>
-            <button type="submit" class="btn-submit">Submit</button>
+            <div class="input-wrapper">
+              <input type="text" placeholder="Masukkan nama" id="input-name" class="form-input" />
+              <p class="error-message" id="name-error"></p>
+            </div>
+
+            <div class="input-wrapper">
+              <input type="text" placeholder="Masukkan username instagram" id="input-insta" class="form-input" />
+              <p class="error-message" id="insta-error"></p>
+            </div>
+
+            <div class="input-wrapper">
+              <input type="tel" placeholder="Masukkan nomor telepon" id="input-telp" class="form-input" />
+              <p class="error-message" id="telp-error"></p>
+            </div>
+
+            <div class="input-wrapper">
+              <input type="text" placeholder="Masukkan alamat" id="input-address" class="form-input" />
+              <p class="error-message" id="address-error"></p>
+            </div>
+
+            <div class="input-wrapper">
+              <textarea placeholder="Masukkan pesan" rows="4" id="input-message" class="form-input"></textarea>
+              <p class="error-message" id="message-error"></p>
+            </div>
+
+            <button type="submit" class="btn-submit" id="btn-submit">Submit</button>
           </form>
         </div>
       </div>

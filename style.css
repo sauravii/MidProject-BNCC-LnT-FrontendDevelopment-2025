@@ -14,6 +14,7 @@
   --color-uiux: #7e03c7;
   --color-white: #ffffff;
   --color-black: #000000;
+  --color-error: #b20110;
 
   /* tipografi */
   --font-family: "Poppins";
@@ -483,8 +484,15 @@ nav {
   gap: 15px;
 }
 
-.contact-form input,
-.contact-form textarea {
+.error-message {
+  font-family: var(--font-family);
+  font-size: var(--desc-tiny);
+  font-weight: var(--weight-regular);
+  color: var(--color-error);
+  margin-top: 4px;
+}
+
+.form-input {
   width: 100%;
   padding: 10px;
   border: 1px solid var(--text-secondary);
@@ -492,6 +500,10 @@ nav {
   font-size: var(--desc-small);
   font-weight: var(--weight-regular);
   font-family: var(--font-family);
+}
+
+.form-input.error {
+  border: 1px solid var(--color-error);
 }
 
 .contact-form input:focus,

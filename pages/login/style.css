@@ -156,6 +156,10 @@ body {
   cursor: pointer;
 }
 
+.btn-login:hover {
+  opacity: 0.9;
+}
+
 .text-confirm {
   color: var(--text-secondary);
   font-size: var(--dp-14);

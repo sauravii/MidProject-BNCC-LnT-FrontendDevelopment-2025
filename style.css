@@ -121,8 +121,9 @@ nav {
   border-radius: 4px;
   color: var(--color-white);
   font-family: var(--font-family);
-  cursor: pointer;
   font-weight: var(--weight-medium);
+  font-size: var(--desc-medium);
+  cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -134,8 +135,9 @@ nav {
   border-radius: 4px;
   color: var(--color-primary);
   font-family: var(--font-family);
-  cursor: pointer;
   font-weight: var(--weight-medium);
+  font-size: var(--desc-medium);
+  cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -194,8 +196,9 @@ nav {
   border-radius: 4px;
   color: var(--color-white);
   font-family: var(--font-family);
-  cursor: pointer;
   font-weight: var(--weight-medium);
+  font-size: var(--desc-medium);
+  cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -520,8 +523,9 @@ nav {
   border-radius: 4px;
   color: var(--color-primary);
   font-family: var(--font-family);
-  cursor: pointer;
   font-weight: var(--weight-medium);
+  font-size: var(--desc-medium);
+  cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 

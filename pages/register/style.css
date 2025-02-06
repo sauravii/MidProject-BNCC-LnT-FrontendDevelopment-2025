@@ -143,7 +143,7 @@ body {
   font-size: 15px;
 }
 
-.btn-login {
+.btn-register {
   width: 100%;
   background-color: var(--color-primary);
   border: none;
@@ -153,6 +153,10 @@ body {
   font-weight: var(--weight-medium);
   font-size: var(--dp-16);
   cursor: pointer;
+}
+
+.btn-register:hover {
+  opacity: 0.9;
 }
 
 .text-confirm {

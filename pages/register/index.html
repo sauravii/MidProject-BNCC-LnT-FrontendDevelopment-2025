@@ -45,6 +45,7 @@
               <label for="female" class="label-gender">Perempuan</label>
             </div>
           </form>
+          <p class="error-message" id="gender-error"></p>
         </div>
         <!-- tgl lahir -->
         <div class="input-wrapper">
@@ -60,9 +61,9 @@
         </div>
         <!-- domisili -->
         <div class="input-wrapper">
-          <p class="input-name">Kota Dimisili</p>
-          <input type="text" placeholder="Masukkan kota dimisili" class="form-input" id="input-dimisili" />
-          <p class="error-message" id="dimisili-error"></p>
+          <p class="input-name">Kota Domisili</p>
+          <input type="text" placeholder="Masukkan kota dimisili" class="form-input" id="input-domisili" />
+          <p class="error-message" id="domisili-error"></p>
         </div>
         <!-- alamat -->
         <div class="input-wrapper">
@@ -76,10 +77,16 @@
           <input type="text" placeholder="Masukkan nomor WhatsApp" class="form-input" id="input-whatsapp" />
           <p class="error-message" id="whatsapp-error"></p>
         </div>
+        <!-- id line -->
+        <div class="input-wrapper">
+          <p class="input-name">ID Line</p>
+          <input type="text" placeholder="Masukkan ID Line" class="form-input" id="input-line" />
+          <p class="error-message" id="line-error"></p>
+        </div>
       </div>
 
       <div class="bottom-content">
-        <button class="btn-login" id="btn-login">Register</button>
+        <button class="btn-register" id="btn-register">Register</button>
         <p class="text-confirm">
           Sudah punya akun?
           <a href="../login/index.html">Login</a>
